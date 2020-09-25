@@ -408,10 +408,10 @@ class _GameScreenState extends State<GameScreen> {
                       child: RaisedButton(
                         color: Colors.teal,
                         onPressed: () {
-                         setState(() {
-                           restart();
-                           loadView();
-                         });
+                          setState(() {
+                            restart();
+                            loadView();
+                          });
                         },
                         child: Text(
                           "Restart",
@@ -468,13 +468,14 @@ class _GameScreenState extends State<GameScreen> {
     }
     if (checked) {
       restart();
-      showAwesomeDialog(context, "Congratulations ! ! !", "You are win",score,time);
+      showAwesomeDialog(
+          context, "Congratulations ! ! !", "You are win", score, time);
     }
   }
 
   void restart() {
     timer.cancel();
-    timer=null;
+    timer = null;
   }
 
   void startTimeout() {
@@ -486,10 +487,24 @@ class _GameScreenState extends State<GameScreen> {
 //      saveTime(time).then((value) => print(time.toString()));
     });
   }
-  String timeFormat(int second){
-    String min=(second/60).round()<10?'0${(second/60).round()}':'${(second/60).round()}';
-    String sec=(second-(second/60).round()*60)<10?'0${(second-(second/60).round()*60)}':
-    '${(second-((second/60).round()*60))}';
-       return '${min}:${sec}';
+
+  String timeFormat(int second) {
+    String min = (second / 60).round() < 10
+        ? '0${(second / 60).round()}'
+        : '${(second / 60).round()}';
+    String sec = (second - (second / 60).round() * 60) < 10
+        ? '0${(second - (second / 60).round() * 60)}'
+        : '${(second - ((second / 60).round() * 60))}';
+    return '${min}:${sec}';
   }
+
+  @override
+  void dispose() {
+    if (timer != null) {
+      timer.cancel();
+      timer = null;
+    }
+    super.dispose();
+  }
+
 }
