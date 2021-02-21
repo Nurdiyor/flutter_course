@@ -1,0 +1,2 @@
+Create listview crud with other ui elements.
+Learn about sql and basic sql commands
