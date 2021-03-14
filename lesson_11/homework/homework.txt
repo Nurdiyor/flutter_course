@@ -1,0 +1,6 @@
+Create database of learning course.
+It includes 3 tables:
+Students,
+Groups,
+Teachers
+
