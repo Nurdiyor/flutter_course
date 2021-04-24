@@ -1,0 +1,15 @@
+Create automate system of University:
+It includs:
+Faculty-crud,
+Group-crud,
+Students-crud,
+Teachers-crud,
+Please use Combobox to
+
+Db scheme:
+faculty {name}
+Teachers {name,group}
+group {group_name,cource,max student count}
+student: {last_name,first_name,group,number}
+
+connect all tables with foreign and primary keys
