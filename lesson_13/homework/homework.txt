@@ -1,0 +1,5 @@
+Create dictionary app with 2 languages(for ex en-uz,uz-en);
+Save searching history and show;
+In the app must be new word add function;
+Splash screen and beautiful design(please use material design and screens must be more than 2);
+Light and dark mode;
