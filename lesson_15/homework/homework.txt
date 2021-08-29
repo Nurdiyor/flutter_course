@@ -1,0 +1,11 @@
+Create app with rest api sql:
+Get from rest and save to db and show.
+App design look like in the picture:
+splash screen;
+main page;
+full information page;
+api:
+    GET:
+        https://sanatoriya.herokuapp.com/api/sanatory/tiny -for main page
+    GET:
+        https://sanatoriya.herokuapp.com/api/sanatory/ -for full info page
